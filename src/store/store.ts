@@ -1,5 +1,6 @@
 import create from 'zustand';
 
+
 type Store = {
     isHovered: boolean;
     setHovered: (hovered: boolean) => void;

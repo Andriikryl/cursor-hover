@@ -19,12 +19,14 @@ export default function ComponentOne() {
         animi asperiores. Quasi sequi ab molestias quae doloribus possimus sunt
         ut!
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis earum
-        impedit ducimus fugiat totam consequatur debitis asperiores ex quam
-        minima quasi, quia porro praesentium exercitationem, nihil expedita
-        recusandae et deserunt.
-      </p>
+      <Hovered>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          earum impedit ducimus fugiat totam consequatur debitis asperiores ex
+          quam minima quasi, quia porro praesentium exercitationem, nihil
+          expedita recusandae et deserunt.
+        </p>
+      </Hovered>
       <hr />
     </div>
   );
