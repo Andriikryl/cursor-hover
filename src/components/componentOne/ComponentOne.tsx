@@ -1,14 +1,17 @@
 import React from "react";
 import styles from "./style.module.css";
+import Hovered from "../hovered/Hovered";
 export default function ComponentOne() {
   return (
     <div className={styles.box}>
       <h3>Component one</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt sint
-        sunt libero ut dolore quod non repellat ab rerum laboriosam, est quam
-        quae numquam, cupiditate perferendis maxime cum accusamus ipsam?
-      </p>
+      <Hovered>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
+          sint sunt libero ut dolore quod non repellat ab rerum laboriosam, est
+          quam quae numquam, cupiditate perferendis maxime cum accusamus ipsam?
+        </p>
+      </Hovered>
       <hr />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, dolorem

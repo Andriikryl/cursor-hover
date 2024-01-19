@@ -2,9 +2,11 @@
 import { useCallback, useEffect } from "react";
 import styles from "./style.module.css";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useHoverStore } from "@/store/store";
 
 export default function Cursor() {
-  const cursorSize = 45;
+  const { isHovered } = useHoverStore();
+  const cursorSize = isHovered ? 400 : 45;
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
@@ -27,7 +29,7 @@ export default function Cursor() {
       mouse.x.set(clientX - cursorSize / 2);
       mouse.y.set(clientY - cursorSize / 2);
     },
-    [mouse.x, mouse.y]
+    [mouse.x, mouse.y, cursorSize]
   );
 
   useEffect(() => {
@@ -39,16 +41,22 @@ export default function Cursor() {
   return (
     <div className={styles.cursorContainer}>
       <motion.div
+        layout
         style={{
           left: smoothMouse.x,
           top: smoothMouse.y,
+          width: cursorSize,
+          height: cursorSize,
         }}
         className={styles.cursor}
       ></motion.div>
       <motion.div
+        layout
         style={{
           left: smoothMouseSide.x,
           top: smoothMouseSide.y,
+          width: cursorSize,
+          height: cursorSize,
         }}
         className={styles.cursor__side}
       ></motion.div>

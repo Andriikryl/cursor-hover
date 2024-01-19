@@ -1,8 +1,6 @@
 .cursor{
     position: fixed;
-    width: 45px;
-    height: 45px;
-    background-color: tomato;
+    background-color: hsl(9, 100%, 64%, .4);
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
